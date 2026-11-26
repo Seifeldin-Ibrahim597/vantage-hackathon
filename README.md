@@ -6,6 +6,8 @@ Our shared university hackathon starter. React + TypeScript + Vite, ready for Ve
 
 ## Links
 
+- [Live app](https://vantage-hackathon-opal.vercel.app)
+- [Vercel dashboard](https://vercel.com/team-vantage/vantage-hackathon)
 - [Repository](https://github.com/Seifeldin-Ibrahim597/vantage-hackathon)
 - [Tasks and ideas](https://github.com/Seifeldin-Ibrahim597/vantage-hackathon/issues)
 - [Pull requests](https://github.com/Seifeldin-Ibrahim597/vantage-hackathon/pulls)
@@ -69,3 +71,19 @@ A GitHub connection, when enabled, deploys `main` to production and creates prev
 ## Secrets
 
 This is a public repository. Keep credentials out of commits. `.env*`, `.vercel/`, `node_modules/`, and build output are ignored. Values prefixed `VITE_` are visible in the browser; never use them for private API keys. Add any future server secrets through the hosting provider's environment settings.
+
+## Verified setup status
+
+- Public GitHub repository created on `main`; teammates can clone or fork using the link.
+- Production app deployed to https://vantage-hackathon-opal.vercel.app under Team Vantage.
+- TypeScript, lint, and production build passed locally and on Vercel.
+- Production URL returned HTTP 200 without sign-in. The live page and copy-clone button were checked in a browser.
+- **Automatic GitHub deployments are not connected yet.** Vercel requires the owner to add the GitHub login connection in [Account Settings > Authentication](https://vercel.com/account/settings/authentication). The CLI reported: "You need to add a Login Connection to your GitHub account first."
+
+After connecting the owner's GitHub account, run this from the project folder:
+
+```bash
+vercel git connect https://github.com/Seifeldin-Ibrahim597/vantage-hackathon --scope team-vantage
+```
+
+Until the connection is complete, the owner can publish updates with the CLI commands above.
