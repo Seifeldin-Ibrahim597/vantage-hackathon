@@ -66,7 +66,7 @@ vercel deploy --scope team-vantage
 vercel deploy --prod --scope team-vantage
 ```
 
-A GitHub connection, when enabled, deploys `main` to production and creates previews for pull requests. See the deployment status below for the verified connection state. The team's current Hobby plan can restrict Git-triggered deployments authored by other people and collaboration on private repositories; owner CLI deployment remains available. No paid upgrade is required to use this starter.
+GitHub is connected to this Vercel project. Pushes to `main` deploy to production; other branches and pull requests use preview deployments, subject to Vercel's access and plan checks. The team's current Hobby plan can restrict Git-triggered deployments authored by other people and collaboration on private repositories; owner CLI deployment remains available. No paid upgrade is required to use this starter.
 
 ## Secrets
 
@@ -78,12 +78,6 @@ This is a public repository. Keep credentials out of commits. `.env*`, `.vercel/
 - Production app deployed to https://vantage-hackathon-opal.vercel.app under Team Vantage.
 - TypeScript, lint, and production build passed locally and on Vercel.
 - Production URL returned HTTP 200 without sign-in. The live page and copy-clone button were checked in a browser.
-- **Automatic GitHub deployments are not connected yet.** Vercel requires the owner to add the GitHub login connection in [Account Settings > Authentication](https://vercel.com/account/settings/authentication). The CLI reported: "You need to add a Login Connection to your GitHub account first."
+- GitHub is connected to `Seifeldin-Ibrahim597/vantage-hackathon`; production branch is `main`.
 
-After connecting the owner's GitHub account, run this from the project folder:
-
-```bash
-vercel git connect https://github.com/Seifeldin-Ibrahim597/vantage-hackathon --scope team-vantage
-```
-
-Until the connection is complete, the owner can publish updates with the CLI commands above.
+Vercel runs checks and creates a deployment after a push. Check deployment status in the Vercel dashboard before sharing the latest version. Owner CLI deployment remains available as an alternative.
